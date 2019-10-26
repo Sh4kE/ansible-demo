@@ -4,8 +4,11 @@
   package:
     name: httpd
     state: present
+  changed_when: true
+  notify: start apache
 
-- name: start apache
-  service:
-    name: httpd
-    state: started
+- name: hallo
+  shell: /bin/false
+  # changed_when: false
+  failed_when: false
+  notify: start apache
