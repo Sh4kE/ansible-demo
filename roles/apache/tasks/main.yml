@@ -1,11 +1,7 @@
 ---
 
-- name: import OS specific vars
-  include_vars:
-    file: "vars-{{ ansible_os_family | lower }}.yml"
+- name: Install
+  include_tasks: setup.yml
 
-- name: install apache
-  package:
-    name: "{{ apache_service_name }}"
-    state: present
-  notify: start apache
+- name: Configure
+  include_tasks: configure_host.yml

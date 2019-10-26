@@ -1,3 +1,8 @@
 ---
 
-apache_service_name: httpd
+apache_service_name: non_existent
+apache_configuration_dir: /etc/non_existent/conf.d
+apache_default_docroot: /var/www/html
+
+programmer_name: Boid
+website_title: Ansible Workshop

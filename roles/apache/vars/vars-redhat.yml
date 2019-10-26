@@ -1,3 +1,4 @@
 ---
 
 apache_service_name: httpd
+apache_configuration_dir: /etc/httpd/conf.d

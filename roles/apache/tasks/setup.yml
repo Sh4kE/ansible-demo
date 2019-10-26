@@ -1,0 +1,11 @@
+---
+
+- name: import OS specific vars
+  include_vars:
+    file: "vars-{{ ansible_os_family | lower }}.yml"
+
+- name: install apache
+  package:
+    name: "{{ apache_service_name }}"
+    state: present
+  notify: restart apache
